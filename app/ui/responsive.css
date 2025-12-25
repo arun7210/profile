@@ -1,0 +1,39 @@
+@media only screen and (max-width: 600px) {
+    .mobile{
+        display: block !important;
+    }
+    .desktop{
+        display: none !important;
+    }
+    header{
+        padding-left : 0 !important;
+        padding-right : 0 !important;
+        padding-bottom: 20px !important;
+    }
+    .btn-toggle{
+        float: left !important;
+        background-color: #fd7e14 !important;
+        border: none;
+    }
+    .navbar-brand{
+        float: left;
+    }
+    .bgCircle{
+        height: 300px !important;
+        width: 300px !important;
+    }
+
+    .scale-mobile {
+        padding: 10px 20px !important;
+        font-size: medium;
+    }
+    .exp-info p{
+        font-size: 12px;
+    }
+
+
+    .success-card{
+        width: 95%;
+        left: 10px;
+    }
+}
