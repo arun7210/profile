@@ -4,13 +4,21 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+// Import Swiper types to fix "implicit any" on settings if needed (optional but good practice)
+import type { SwiperOptions } from 'swiper/types';
 
 // Import Swiper styles
 import 'swiper/css';
 import Image from 'next/image';
 
+// 1. Define the Data Interface
+interface TechItem {
+  name: string;
+  icon: string;
+}
+
 // --- DATA: Full List ---
-const techData = [
+const techData: TechItem[] = [
   { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
   { name: 'Laravel', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg' },
   { name: 'CodeIgniter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg' },
@@ -38,15 +46,16 @@ const row1 = techData.slice(0, 10);
 const row2 = techData.slice(10, 20);
 
 // Shared Config for Continuous Sliding
-const sliderSettings = {
+// We type this as SwiperOptions to ensure we are using valid Swiper properties
+const sliderSettings: SwiperOptions = {
   slidesPerView: 4,
   spaceBetween: 30,
-  loop: true, // Infinite loop
-  speed: 5000, // Duration of transition (slower = smoother)
-  allowTouchMove: false, // Prevent user swiping (optional, keeps it like a ticker)
+  loop: true, 
+  speed: 5000, 
+  allowTouchMove: false, 
   autoplay: {
-    delay: 0, // No pause between slides
-    disableOnInteraction: false, // Keep moving even if touched
+    delay: 0, 
+    disableOnInteraction: false, 
   },
   modules: [Autoplay],
   breakpoints: {
@@ -65,7 +74,7 @@ export default function TechStack() {
   return (
     <section className='font-lufga' style={{  color: 'white', padding: '80px 0' }}>
       
-      {/* 1. Add this Style Tag for Linear Movement */}
+      {/* Linear Movement Style */}
       <style jsx global>{`
         .swiper-wrapper {
           transition-timing-function: linear !important;
@@ -108,8 +117,15 @@ export default function TechStack() {
   );
 }
 
+// 2. Define Props Interface for the Helper Component
+interface TechCardProps {
+  tech: TechItem;
+  bg: string;
+  highlight: string;
+}
+
 // Helper Component for the Card
-function TechCard({ tech, bg, highlight }) {
+function TechCard({ tech, bg, highlight }: TechCardProps) {
   return (
     <div 
       className="d-flex flex-column align-items-center justify-content-center p-3 rounded-3 tech-card"
@@ -119,21 +135,22 @@ function TechCard({ tech, bg, highlight }) {
         height: '120px',
         transition: 'all 0.3s ease'
       }}
-      onMouseEnter={(e) => {
+      // Type the Mouse Event explicitly
+      onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
         e.currentTarget.style.borderColor = highlight;
         e.currentTarget.style.transform = 'translateY(-5px)';
       }}
-      onMouseLeave={(e) => {
+      onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
         e.currentTarget.style.borderColor = '#333';
         e.currentTarget.style.transform = 'translateY(0)';
       }}
     >
        <Image 
-          src={tech.icon} 
-          alt={tech.name} 
-          style={{ width: '40px', height: '40px', objectFit: 'contain', marginBottom: '10px' }} 
-          width={40}
-          height={40}
+         src={tech.icon} 
+         alt={tech.name} 
+         style={{ width: '40px', height: '40px', objectFit: 'contain', marginBottom: '10px' }} 
+         width={40}
+         height={40}
        />
        <p className="mb-0 fw-bold small text-white text-center" style={{fontSize: '0.8rem'}}>{tech.name}</p>
     </div>
