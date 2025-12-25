@@ -3,32 +3,45 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 
+// 1. Define the shape of your form data
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  details: string;
+}
+
+// 2. Define the possible status states
+type FormStatus = 'sending' | 'success' | 'error' | null;
+
 export default function Contact() {
-  const mainBg = '#111';
   const inputBg = '#222';
   const orangeColor = '#fd7e14';
 
-  // 1. State for Form Data
-  const [formData, setFormData] = useState({
+  // 3. Apply types to useState
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     phone: '',
     details: ''
   });
 
-  // 2. State for Status (Loading/Success/Error)
-  const [status, setStatus] = useState(null); // 'sending', 'success', 'error'
+  const [status, setStatus] = useState<FormStatus>(null);
 
-  // Handle Input Changes
-  const handleChange = (e) => {
+  // 4. Handle Input Changes with strict types
+  // We allow both HTMLInputElement (text) and HTMLTextAreaElement (textarea)
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
-    // Map controlId="formName" -> "name"
-    const key = id.replace('form', '').toLowerCase(); 
+    
+    // Convert "formName" -> "name". 
+    // We explicitly tell TypeScript that 'key' is a valid key of ContactFormData
+    const key = id.replace('form', '').toLowerCase() as keyof ContactFormData; 
+    
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
-  // Handle Submit
-  const handleSubmit = async (e) => {
+  // 5. Handle Submit
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
 
@@ -40,7 +53,8 @@ export default function Contact() {
       });
 
       if (res.ok) {
-        console.log(await res.json());
+        // You might want to type the response here if you use the data
+        // const data = await res.json(); 
         setStatus('success');
         setFormData({ name: '', email: '', phone: '', details: '' }); // Reset form
       } else {
@@ -52,7 +66,7 @@ export default function Contact() {
     }
   };
 
-  const darkInputStyle = {
+  const darkInputStyle: React.CSSProperties = {
     backgroundColor: inputBg,
     border: '1px solid #333',
     color: '#fff',
@@ -70,7 +84,7 @@ export default function Contact() {
           <p className="text-secondary">Cultivating Connections: Reach Out And Connect With Me</p>
         </div>
 
-        {/* 3. Status Alerts */}
+        {/* Status Alerts */}
         {status === 'success' && (
           <Alert variant="success" className="text-center">Message sent successfully!</Alert>
         )}
@@ -78,7 +92,6 @@ export default function Contact() {
           <Alert variant="danger" className="text-center">Something went wrong. Please try again.</Alert>
         )}
 
-        {/* Connect onSubmit to our function */}
         <Form onSubmit={handleSubmit}>
           <Row className="g-4">
             <Col md={6}>
@@ -145,16 +158,17 @@ export default function Contact() {
                 disabled={status === 'sending'}
                 className="px-5 rounded-3"
                 style={{ borderWidth: '1px', fontSize: '1rem', transition: 'all 0.3s ease' }}
-                onMouseEnter={(e) => {
+                // Use currentTarget to ensure we are styling the button itself, not a child element
+                onMouseEnter={(e: React.MouseEvent<HTMLButtonElement>) => {
                     if(status !== 'sending') {
-                        e.target.style.backgroundColor = orangeColor;
-                        e.target.style.borderColor = orangeColor;
+                        e.currentTarget.style.backgroundColor = orangeColor;
+                        e.currentTarget.style.borderColor = orangeColor;
                     }
                 }}
-                onMouseLeave={(e) => {
+                onMouseLeave={(e: React.MouseEvent<HTMLButtonElement>) => {
                     if(status !== 'sending') {
-                        e.target.style.backgroundColor = 'transparent';
-                        e.target.style.borderColor = '#f8f9fa';
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.borderColor = '#f8f9fa';
                     }
                 }}
               >
@@ -166,6 +180,7 @@ export default function Contact() {
         </Form>
       </Container>
       
+      {/* Global styles work in Next.js TSX files too */}
       <style jsx global>{`
         .dark-placeholder::placeholder { color: #888 !important; opacity: 1; }
         .form-control:focus {
