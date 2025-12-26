@@ -23,7 +23,7 @@ export default function Home() {
 								
 								{/* Title */}
 								<h1 className="text-center text-md-start display-3 fw-bold mb-4" style={{ color: '#fd7e14' }}>
-									Software Developer
+									Software Developer2
 								</h1>
 
 								{/* Social Icons Placeholder */}
