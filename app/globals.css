@@ -1,4 +1,5 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+@import 'animate.css';
 @import "ui/size.css";
 @import "ui/responsive.css";
 
@@ -19,6 +20,14 @@ body {
 
 .font-lufga {
   font-family: var(--font-lufga);
+}
+
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animate__animated {
+  opacity: 1;
 }
 
 .mobile{

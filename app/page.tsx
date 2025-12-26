@@ -18,11 +18,11 @@ export default function Home() {
 							{/* LEFT COLUMN: Text */}
 							<Col md={6}>
 								{/* Introduction Text */}
-								<h4 className="text-center text-md-start text-secondary fw-normal mb-3">Hi I am</h4>
-								<h2 className="text-center text-md-start text-secondary fw-bold mb-4">Arun Kumar</h2>
+								<h4 className="text-center text-md-start text-secondary fw-normal mb-3 animate__animated animate__fadeInUp">Hi I am</h4>
+								<h2 className="text-center text-md-start text-secondary fw-bold mb-4 animate__animated animate__fadeInUp">Arun Kumar</h2>
 								
 								{/* Title */}
-								<h1 className="text-center text-md-start display-3 fw-bold mb-4" style={{ color: '#fd7e14' }}>
+								<h1 className="text-center text-md-start display-3 fw-bold mb-4 animate__animated animate__fadeInUp" style={{ color: '#fd7e14' }}>
 									Software Developer
 								</h1>
 

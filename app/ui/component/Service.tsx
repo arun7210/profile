@@ -23,7 +23,7 @@ export default function Services() {
             
             {/* 1. HEADER SECTION */}
             <div className="text-center mb-5">
-                <h2 className="fw-bold display-5 mb-3">Services</h2>
+                <h2 className="fw-bold display-5 mb-3 animate-on-scroll animate__backInUp" style={{ color: orangeColor }}>Services</h2>
                 <p className="text-secondary" style={{ maxWidth: '600px', margin: '0 auto' }}>
                     We are a team of experts in Website Development, CRM/CMS development and website security.
                 </p>

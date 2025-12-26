@@ -76,11 +76,11 @@ export default function Contact() {
   };
 
   return (
-    <section className='font-lufga' style={{ color: 'white', padding: '80px 0' }}>
+    <section id='contact' className='font-lufga' style={{ color: 'white', padding: '80px 0' }}>
       <Container style={{ maxWidth: '900px' }}>
         
         <div className="text-center mb-5">
-          <h2 className="fw-bold display-5 mb-3">Contact me</h2>
+          <h2 className="fw-bold display-5 mb-3 animate-on-scroll animate__backInUp" style={{ color: orangeColor }}>Contact me</h2>
           <p className="text-secondary">Cultivating Connections: Reach Out And Connect With Me</p>
         </div>
 

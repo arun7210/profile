@@ -12,7 +12,7 @@ export default function About() {
         
         {/* 1. HEADER */}
         <div className="text-center mb-5">
-          <h2 className="fw-bold display-5 mb-2">About Me</h2>
+          <h2 className="fw-bold display-5 mb-2 animate-on-scroll animate__backInUp" style={{ color: orangeColor }}>About Me</h2>
           <p className="text-secondary small">
             Web Development And Web Security
           </p>

@@ -83,7 +83,7 @@ export default function TechStack() {
 
       <Container>
         <div className="text-center mb-5">
-          <h2 className="fw-bold display-5 mb-2" style={{ color: orangeColor }}>Technology Stack</h2>
+          <h2 className="fw-bold display-5 mb-2 animate-on-scroll animate__backInUp" style={{ color: orangeColor }}>Technology Stack</h2>
           <p className="text-secondary">Tools and frameworks I use</p>
         </div>
 
