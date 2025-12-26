@@ -13,7 +13,7 @@ export default function Home() {
 			<main>
 				<section className="font-lufga">
 					<Container className="d-flex align-items-center" style={{ minHeight: '80vh' }}>
-						<Row className="w-100 align-items-center">
+						<Row className="w-100 align-items-center d-rev">
 						
 							{/* LEFT COLUMN: Text */}
 							<Col md={6}>
