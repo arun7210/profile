@@ -9,11 +9,11 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen pt-5">
+		<div className="min-h-screen">
 			<main>
 				<section className="font-lufga">
 					<Container className="d-flex align-items-center" style={{ minHeight: '80vh' }}>
-						<Row className="w-100 align-items-center d-rev">
+						<Row className="w-100 align-items-center flex-column-reverse flex-md-row">
 						
 							{/* LEFT COLUMN: Text */}
 							<Col md={6}>
@@ -23,7 +23,7 @@ export default function Home() {
 								
 								{/* Title */}
 								<h1 className="text-center text-md-start display-3 fw-bold mb-4" style={{ color: '#fd7e14' }}>
-									Software Developer2
+									Software Developer
 								</h1>
 
 								{/* Social Icons Placeholder */}
