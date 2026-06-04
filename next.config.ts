@@ -2,9 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-  output: "export",
+  // output: "export",
   images: {
-    unoptimized: true, // 👈 Add this line
+    unoptimized: true,
   },
 };
 
