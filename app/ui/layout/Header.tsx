@@ -71,9 +71,9 @@ export default function Header(){
                                     <li className="nav-item">
                                         <Link className="nav-link menu-link" href="#about">About me</Link>
                                     </li>
-                                    <li className="nav-item">
+                                    {/* <li className="nav-item">
                                         <Link className="nav-link menu-link" href="#portfolio">Portfolio</Link>
-                                    </li>
+                                    </li> */}
                                     <li className="nav-item">
                                         <Link className="nav-link menu-link" href="#contact">Contact me</Link>
                                     </li>
@@ -81,7 +81,7 @@ export default function Header(){
                             </div>
                         </Col>
                         <Col lg={1} sm={4} xs={4}>
-                            <Button className="btn-warning text-white px-4 py-2 float-end">Hire Me</Button>                        
+                            <Link href="#contact" className="nav-link btn-warning text-white px-4 py-2 float-end">Hire Me</Link>                        
                         </Col>
                     </nav>     
                     {/* <!-- End Navbar --> */}

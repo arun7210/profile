@@ -6,6 +6,7 @@ import TechStack from "./ui/component/TechStack";
 import Contact from "./ui/component/Contact";
 import Footer from "./ui/layout/Footer";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -32,19 +33,19 @@ export default function Home() {
 										style={{ width: '40px', height: '40px', cursor: 'pointer' }}>
 										<FaInstagram />
 									</div>
-									<div className="text-white d-flex align-items-center justify-content-center border border-secondary rounded-circle" 
+									<Link href="https://github.com/luffy7874/" target="_blank" className="text-white d-flex align-items-center justify-content-center border border-secondary rounded-circle" 
 										style={{ width: '40px', height: '40px', cursor: 'pointer' }}>
 										<FaGithub />
-									</div>
-									<div className="text-white d-flex align-items-center justify-content-center border border-secondary rounded-circle" 
+									</Link>
+									<Link href="https://www.linkedin.com/in/arun-kumar-255aa5148/" target="_blank" className="text-white d-flex align-items-center justify-content-center border border-secondary rounded-circle" 
 										style={{ width: '40px', height: '40px', cursor: 'pointer' }}>
 										<FaLinkedin />
-									</div>
+									</Link>
 								</div>
 
 								{/* Action Buttons */}
 								<div className="d-flex justify-content-center justify-content-md-start gap-3 mb-5">
-									<Button size="lg" className="scale-mobile text-white fw-bold px-5 rounded-1" style={{ backgroundColor: '#fd7e14', border: 'none' }}>
+									<Button href="#contact" size="lg" className="scale-mobile text-white fw-bold px-5 rounded-1" style={{ backgroundColor: '#fd7e14', border: 'none' }}>
 										Hire Me
 									</Button>
 									<Button href="https://drive.google.com/file/d/1aG2uJR2C-oqs7vF3e2Yqqp8MCpt5l9DQ/view?usp=drive_link" target="_blank" size="lg" variant="outline-light" className="scale-mobile px-5 rounded-1">
