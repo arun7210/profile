@@ -71,9 +71,9 @@ export default function Header(){
                                     <li className="nav-item">
                                         <Link className="nav-link menu-link" href="#about">About me</Link>
                                     </li>
-                                    {/* <li className="nav-item">
+                                    <li className="nav-item">
                                         <Link className="nav-link menu-link" href="#portfolio">Portfolio</Link>
-                                    </li> */}
+                                    </li>
                                     <li className="nav-item">
                                         <Link className="nav-link menu-link" href="#contact">Contact me</Link>
                                     </li>

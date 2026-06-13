@@ -54,6 +54,58 @@ body {
   z-index: 0;
 }
 
+.portfolio-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Smooth corners */
+  cursor: pointer;
+}
+
+/* Base state for the image */
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Zoom the image slightly when hovering over the wrapper */
+.portfolio-wrapper:hover .portfolio-image {
+  transform: scale(1.08);
+}
+
+/* The dark overlay - hidden by default (opacity: 0) */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark background for text contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Show the overlay on hover */
+.portfolio-wrapper:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Base state for the text content - pushed down slightly */
+.portfolio-content {
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Slide the text up into its natural position on hover */
+.portfolio-wrapper:hover .portfolio-content {
+  transform: translateY(0);
+}
+
 
 
 @media (max-width: 768px) {

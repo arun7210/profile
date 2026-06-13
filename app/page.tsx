@@ -7,6 +7,7 @@ import Contact from "./ui/component/Contact";
 import Footer from "./ui/layout/Footer";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import Link from "next/link";
+import Portfolio from "./ui/component/Portfolio";
 
 export default function Home() {
 	return (
@@ -93,6 +94,8 @@ export default function Home() {
 				<Services />
 
 				<About />
+
+				<Portfolio />
 
 				<TechStack />
 

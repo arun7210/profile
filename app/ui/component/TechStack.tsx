@@ -72,7 +72,7 @@ export default function TechStack() {
   const orangeColor = '#fd7e14';
 
   return (
-    <section className='font-lufga' style={{  color: 'white', padding: '80px 0' }}>
+    <section className='font-lufga' style={{ backgroundColor: mainBg,  color: 'white', padding: '80px 0' }}>
       
       {/* Linear Movement Style */}
       <style jsx global>{`
