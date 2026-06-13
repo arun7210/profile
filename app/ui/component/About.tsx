@@ -57,7 +57,7 @@ export default function About() {
                </p>
 
                 <Button 
-                    href='https://drive.google.com/file/d/1aG2uJR2C-oqs7vF3e2Yqqp8MCpt5l9DQ/view?usp=drive_link'
+                    href='https://drive.google.com/file/d/1OTEM3270GR3X2Ld1ycqHRmfQBPtO4EXn/view?usp=sharing'
                     target="_blank"
                     className="mt-4 fw-bold px-4 py-2" 
                     style={{ backgroundColor: orangeColor, border: 'none', color: 'white' }}

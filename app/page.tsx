@@ -49,7 +49,7 @@ export default function Home() {
 									<Button href="#contact" size="lg" className="scale-mobile text-white fw-bold px-5 rounded-1" style={{ backgroundColor: '#fd7e14', border: 'none' }}>
 										Hire Me
 									</Button>
-									<Button href="https://drive.google.com/file/d/1aG2uJR2C-oqs7vF3e2Yqqp8MCpt5l9DQ/view?usp=drive_link" target="_blank" size="lg" variant="outline-light" className="scale-mobile px-5 rounded-1">
+									<Button href="https://drive.google.com/file/d/1OTEM3270GR3X2Ld1ycqHRmfQBPtO4EXn/view?usp=sharing" target="_blank" size="lg" variant="outline-light" className="scale-mobile px-5 rounded-1">
 										Download CV
 									</Button>
 								</div>
