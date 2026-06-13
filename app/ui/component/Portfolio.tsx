@@ -9,7 +9,7 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      name: "Outreach Assistant",
+      name: "AI Outreach Assistant",
       imageUrl: "/images/portfolio/outreach-asistant.vercel.app_.png",
       link: "https://outreach-asistant.vercel.app/"
     },
