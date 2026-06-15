@@ -34,7 +34,7 @@ export default function Home() {
 										style={{ width: '40px', height: '40px', cursor: 'pointer' }}>
 										<FaInstagram />
 									</div>
-									<Link href="https://github.com/luffy7874/" target="_blank" className="text-white d-flex align-items-center justify-content-center border border-secondary rounded-circle" 
+									<Link href="https://github.com/orgs/arun26282/repositories/" target="_blank" className="text-white d-flex align-items-center justify-content-center border border-secondary rounded-circle" 
 										style={{ width: '40px', height: '40px', cursor: 'pointer' }}>
 										<FaGithub />
 									</Link>
@@ -56,17 +56,13 @@ export default function Home() {
 
 								<div className="exp-info p-4 rounded-3 d-flex justify-content-md-center" style={{ backgroundColor: '#1a1a1a', maxWidth: '500px' }}>
 									<Row className="w-100">
-										<Col xs={4} className="border-end border-secondary">
-											<h3 className="fw-bold mb-0" style={{ color: '#fd7e14' }}>5+</h3>
-											<p className="text-secondary mb-0">Experiences</p>
+										<Col xs={6} className="border-end border-secondary">
+											<h3 className="fw-bold mb-0" style={{ color: '#fd7e14' }}>4+</h3>
+											<p className="text-secondary mb-0">Years of Experience</p>
 										</Col>
-										<Col xs={4} className="border-end border-secondary">
+										<Col xs={6} className=" border-secondary">
 											<h3 className="fw-bold mb-0" style={{ color: '#fd7e14' }}>20+</h3>
 											<p className="text-secondary mb-0">Project done</p>
-										</Col>
-										<Col xs={4}>
-											<h3 className="fw-bold mb-0" style={{ color: '#fd7e14' }}>20+</h3>
-											<p className="text-secondary mb-0">Happy Clients</p>
 										</Col>
 									</Row>
 								</div>

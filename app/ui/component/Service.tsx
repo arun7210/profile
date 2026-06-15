@@ -5,7 +5,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 export default function Services() {
   // Data array to make it easy to add more services later
   const services = [
-    { title: 'Website Development', image: '/images/vectors/web-development.svg', desc: 'U provide fast, secure and responsive websites which run smoothly on all modern devices' },
+    { title: 'Website Development', image: '/images/vectors/web-development.svg', desc: 'I provide fast, secure and responsive websites which run smoothly on all modern devices' },
     { title: 'SPA Website', image: '/images/vectors/spa.svg', desc: 'I make secure and fast single page application (SPA) using latest technologies React.Js/Vue.Js' },
     { title: 'CMS Development', image: '/images/vectors/cms.svg', desc: 'I provide good CMS website for easy understanding which helps you to manage contents on your site' },
     { title: 'Ecommerce Development', image: '/images/vectors/e-commerce.svg', desc: 'Start your online store and sell your products world wide using ecommerce technologies.' },
@@ -25,7 +25,7 @@ export default function Services() {
             <div className="text-center mb-5">
                 <h2 className="fw-bold display-5 mb-3 animate-on-scroll animate__backInUp" style={{ color: orangeColor }}>Services</h2>
                 <p className="text-secondary" style={{ maxWidth: '600px', margin: '0 auto' }}>
-                    We are a team of experts in Website Development, CRM/CMS development and website security.
+                    I am expert in building Websites, CRM/CMS development and website security.
                 </p>
             </div>
 
